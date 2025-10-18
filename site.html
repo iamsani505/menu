@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>منوی کافی‌شاپ</title>
+
+  <!-- فونت فارسی -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #e8b45f;
+      --text: #f7f3ef;
+      --muted: rgba(247,243,239,0.75);
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Vazirmatn", sans-serif;
+      color: var(--text);
+      /* بک‌گراند جدید: تصویر فنجان قهوه روی میز چوبی */
+      background: url("coffee-cup-wooden-table.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.55); /* پوشش نیمه‌شفاف برای خوانایی */
+    }
+
+    .menu-card {
+      width: 100%;
+      max-width: 820px;
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      overflow: hidden;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    h1.title {
+      font-size: 38px;
+      margin: 10px 0 20px;
+      color: var(--accent);
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(232,180,95,0.15);
+      padding: 14px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .panel h3 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    ul.menu-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.menu-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 6px;
+      border-radius: 6px;
+      transition: background .15s ease;
+      color: var(--muted);
+    }
+
+    ul.menu-list li:hover {
+      background: rgba(232,180,95,0.08);
+      color: var(--text);
+    }
+
+    .item-name {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .item-price {
+      font-weight: 700;
+      font-size: 15px;
+      direction: ltr;
+    }
+
+    .menu-footer {
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      box-shadow: 0 8px 20px rgba(232,180,95,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(232,180,95,0.4);
+    }
+
+    @media (max-width:720px) {
+      .grid { grid-template-columns: 1fr; }
+      h1.title { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="menu-card">
+      <h1 class="title">☕ منوی کافی‌شاپ ☕</h1>
+
+      <div class="grid">
+        <section class="panel">
+          <h3>قهوه</h3>
+          <ul class="menu-list">
+            <li><span class="item-name">آمریکانو</span><span class="item-price">۷۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">کاپوچینو</span><span class="item-price">۹۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">ماکیاتو</span><span class="item-price">۸۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">اسپرسو</span><span class="item-price">۵۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">لاته</span><span class="item-price">۱۰۰,۰۰۰ تومان</span></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3>دسر</h3>
+          <ul class="menu-list">
+            <li><span class="item-name">براونی شکلاتی</span><span class="item-price">۷۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">چیزکیک وانیلی</span><span class="item-price">۸۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">کرپ توت‌فرنگی</span><span class="item-price">۶۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">مافن شکلات</span><span class="item-price">۵۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">پنکیک</span><span class="item-price">۷۰,۰۰۰ تومان</span></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3>نوشیدنی</h3>
+          <ul class="menu-list">
+            <li><span class="item-name">آیس آمریکانو</span><span class="item-price">۷۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">موکا یخ‌زده</span><span class="item-price">۹۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">شیک وانیل</span><span class="item-price">۸۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">لیموناد معطر</span><span class="item-price">۶۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">شکلات داغ</span><span class="item-price">۶۵,۰۰۰ تومان</span></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3>دمنوش</h3>
+          <ul class="menu-list">
+            <li><span class="item-name">دمنوش بابونه</span><span class="item-price">۴۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">دمنوش نعناع</span><span class="item-price">۴۵,۰۰۰ تومان</span></li>
+            <li><span class="item-name">چای زنجبیل</span><span class="item-price">۵۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">چای سیاه سنتی</span><span class="item-price">۳۰,۰۰۰ تومان</span></li>
+            <li><span class="item-name">دمنوش ترکیبی</span><span class="item-price">۵۵,۰۰۰ تومان</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="menu-footer">
+        <a class="contact-btn" href="tel:09155200926">📞 تماس با ما</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
